@@ -1,4 +1,4 @@
-### Advent Of Code Day 1 Dec 1, 2020
+// Advent Of Code Day 1 Dec 1, 2020
 
 const nums = [1567,
 1223,
