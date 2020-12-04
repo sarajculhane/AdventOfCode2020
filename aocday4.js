@@ -1,4 +1,5 @@
 let {data} = require('./day4data')
+const Regex = require("regex");
 
 data = data.split('\n')
 let passports = []
@@ -16,7 +17,7 @@ const validPassports = passports.map((passport) => passport.split(' ').map((item
 
 // problem 1
 
-const validPassports = (passports) => {
+const validatePassports = (passports) => {
     let count = 0
     for(let passport of passports) {
         passport = passport.slice(0, passport.length-1)
@@ -25,7 +26,6 @@ const validPassports = (passports) => {
     }
     return count
 }
-passports.forEach((passport) => console.log(passport.length-1))
 
 
 
@@ -52,9 +52,6 @@ const valid = validTwo(validPassports)
 
 let secondValid = passports.map((passport) => passport.split(' ').slice(0, passport.length-1).filter(val => val!=='' && !val.includes('cid')))
 secondValid = secondValid.filter((val, i) => valid.includes(i))
-// const validPass = passports.map((passport) => passport).filter((val, i) => console.log(valid))
-// console.log(secondValid)
-
 
 
 const getPassportObj = (pass) => {
@@ -77,9 +74,11 @@ const getPassportObj = (pass) => {
 }
 
 const fullPassports = getPassportObj(secondValid)
-const Regex = require("regex");
+
 
 /*
+
+validate passports based on the following conditions
 
 byr (Birth Year) - four digits; at least 1920 and at most 2002.
 iyr (Issue Year) - four digits; at least 2010 and at most 2020.
@@ -130,10 +129,7 @@ const megaValidator = (passports) => {
 
         if(localCount === 7) count++
 
-        console.log(passport,localCount,passport['hcl'])
     }
     return count
     }
 
-// console.log(hairRegex('b6652a'))
-console.log(megaValidator(fullPassports))
