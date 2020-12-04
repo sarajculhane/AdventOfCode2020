@@ -1,0 +1,23 @@
+{
+  "name": "AdventOfCode2020",
+  "version": "1.0.0",
+  "description": "Solutions for AoC 2020.",
+  "main": "aocday1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarajculhane/AdventOfCode2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarajculhane/AdventOfCode2020/issues"
+  },
+  "homepage": "https://github.com/sarajculhane/AdventOfCode2020#readme",
+  "dependencies": {
+    "regex": "^0.1.1"
+  }
+}
