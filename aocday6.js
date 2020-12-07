@@ -8,7 +8,6 @@ const strGroups = groups.map((group) => group.join(''))
 
 const getYes = (groups) => {
     let sum = 0
-    let count = 0
     groups.forEach((group) => {
         group = group.split('')
         const groupSet = new Set()
