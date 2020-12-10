@@ -30,7 +30,7 @@ const getAcc = (moves) => {
     return accumulator
 }
 
-// problem 2
+// problem 2 - INCOMPLETE
 const terminate = (moves) => {
     let accumulator = 0
     let cur = 0
