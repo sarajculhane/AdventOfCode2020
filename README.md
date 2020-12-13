@@ -4,7 +4,7 @@ I will indicate such.
 
 My main goal with participating is to tackle interesting problems each day.  Ideally, I hope to optimize some of the problems further and will do so when time permits.
 
-## Progress (as of  Day 10/ Dec 10th 2020 2:30EST):
+## Progress (as of  Day 13/ Dec 13th 2020 2:20EST):
 
 #### Day 1 - 2 Stars
 #### Day 2 - 2 Stars
@@ -15,4 +15,8 @@ My main goal with participating is to tackle interesting problems each day.  Ide
 #### Day 7 - 0 Stars (have found this to be the most challenging problem so far and have set it aside)
 #### Day 8 - 1 Star (will revise part 2 soon)
 #### Day 9 - 2 Stars
-#### Day 10 - Not started
+#### Day 10 -1 Star
+#### Day 11 - 0 Stars 
+#### Day 12 - 1 Star
+#### Day 13 - 0 Stars (Not started)
+
