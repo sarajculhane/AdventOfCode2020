@@ -1,7 +1,9 @@
 const fs = require('fs');
 const filename = 'day13data.txt';
 let [timestamp, ids ] = fs.readFileSync(filename).toString().split('\n')
-ids = ids.split(',').filter(val => val !== 'x').map(val => Number(val))
+ids = ids.split(',').filter(val => val !== 'x')
+
+numIds = ids.map(val => Number(val))
 
 // part 1
 
@@ -36,4 +38,24 @@ ex :
 
 
 
-console.log(soonestBus(timestamp, ids))
+console.log(soonestBus(timestamp, numIds))
+
+
+// problem 2
+
+const earliestOffset = (ids) => {
+    let t = 0
+    const mins = ids.map((val, i) => {
+        if(val === 'x') return 0
+        else return i+1
+    })
+
+    
+    
+
+}
+
+const test = [17,'x',13,19]
+// 3417
+
+console.log(earliestOffset(test))
