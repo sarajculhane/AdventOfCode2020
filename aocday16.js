@@ -7,8 +7,6 @@ let [conditions, tickets] = data
 let [myTickets, nearbyTickets] = [tickets.slice(1, 2),tickets.slice(3)]
 
 
-console.log(conditions)
-
 let nums = []
 
 conditions.forEach((condition) => {
@@ -16,9 +14,6 @@ conditions.forEach((condition) => {
 })
 
 nums = nums.join(' ').split(' ').filter((val) => val != '' && val !=='or')
-
-console.log(nums, nums.length)
-
 const getCols = (nums) => {
     let dat = {}
     let j = 1
@@ -49,15 +44,41 @@ const getCols = (nums) => {
 
 const obj = getCols(nums)
 
+// console.log(obj, nums)
 
 const validator = (obj) => {
-    let invalid = []
     let valid = []
+    let min = [], max = []
+    // const valsMins = obj[2]
+
+    for(key in obj) {
+       valid.push(obj[key].map((val) => val.split('-').map((num) => Number(num))))
+    }
+
+    valid.forEach((arr) => {
+        let localMinOne = Infinity, localMinTwo = Infinity, localMaxOne = 0, localMaxTwo = 0
+        for(let i = 0; i < arr.length; i++) {
+            localMinOne = Math.min(localMinOne, arr[i][0])
+            localMaxOne = Math.max(localMaxOne, arr[i][0])
+            localMinTwo = Math.min(localMinTwo, arr[i][1])
+            localMaxTwo = Math.max(localMaxTwo, arr[i][1])
+        }
+        min.push(localMinOne, localMinTwo)
+        max.push(localMaxTwo, localMaxOne)
+    } )
 
     
 }
 
+console.log(validator(obj))
+console.log(obj)
+
+
+
 /*
+
+[ 26, 180, 25, 127 ]
+[ 901, 971, 836, 971 ]
 
 */
 
