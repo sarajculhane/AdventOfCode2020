@@ -17,4 +17,18 @@ const reverse = (data) => {
     return newArr
 }
 
-console.log(reverse(data))
+data = reverse(data)
+
+let testLine = data[0]
+
+const calculator = (line) => {
+    const stack = []
+    let sum = 0, bool = false
+
+    for(let i = 0; i < line.length; i++) {
+        if(line[i] === '(') stack.push(line[i])
+    }
+}
+
+
+console.log(calculator(testLine))
